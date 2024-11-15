@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1729462259354
+current_stage: None
+description: ''
+last_updated_timestamp: 1729462259354
+name: mean-risk
+run_id: a6a420f582f240c48f26aa7dfee164d5
+run_link: ''
+source: mlflow-artifacts:/721934320915735068/a6a420f582f240c48f26aa7dfee164d5/artifacts/mean-risk
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/721934320915735068/a6a420f582f240c48f26aa7dfee164d5/artifacts/mean-risk
+user_id: null
+version: 1

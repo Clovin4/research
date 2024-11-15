@@ -1,0 +1,43 @@
+site_name: Research
+
+nav:
+  - Home: index.md
+  - Research:
+      - Abstract: research/abstract.md
+      - Notebooks:
+          - Mean Risk EDA: notebooks/0.0.0-mean-risk.ipynb
+          - Portfolio Optimization: notebooks/0.0.1-options-pricing.ipynb
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+
+plugins: 
+  - search
+  - mkdocs-jupyter
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight

@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/721934320915735068/05af5f7d00aa471b9d93cc8105f93745/artifacts
+deleted_time: 1729480458402
+end_time: 1729376640465
+entry_point_name: ''
+experiment_id: '721934320915735068'
+lifecycle_stage: deleted
+run_id: 05af5f7d00aa471b9d93cc8105f93745
+run_name: mean-risk1
+run_uuid: 05af5f7d00aa471b9d93cc8105f93745
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729376640446
+status: 4
+tags: []
+user_id: christianl

@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1729462945178
+current_stage: None
+description: ''
+last_updated_timestamp: 1729462945178
+name: mean-risk
+run_id: 1f1938bf5f5c4328b7d343c171868ba9
+run_link: ''
+source: mlflow-artifacts:/721934320915735068/1f1938bf5f5c4328b7d343c171868ba9/artifacts/model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/721934320915735068/1f1938bf5f5c4328b7d343c171868ba9/artifacts/model
+user_id: null
+version: 3
