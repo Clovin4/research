@@ -1,0 +1,50 @@
+name: Deploy Documentation 
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Install uv
+        uses: astral-sh/setup-uv@v2
+      - name: Set up Python
+        run: uv python install 3.11
+      - name: Install dependencies
+        run: uv sync --all-extras --dev
+      - name: Enable caching
+        uses: astral-sh/setup-uv@v2
+        with:
+          enable-cache: true
+      - name: Build documentation
+        run: uv run mkdocs build
+      - name: Deploy documentation
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
+          cname: research.clovin4.github.io
+          commit_message: ${{ github.event.head_commit.message }}
+          enable_jekyll: true
+          force_orphan: true
+          clean: true
+          allow_empty_commit: false
+          keep_files: false
+          git_config_user_name: github-actions[bot]
+          git_config_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_committer: github-actions[bot]
+          commit_committer_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: github-actions[bot]
+          commit_author_email: 41898282+github-actions[bot]@users.noreply.github.com
